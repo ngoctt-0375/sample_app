@@ -10,6 +10,8 @@ gem "bootstrap-sass", "3.4.1"
 
 gem "rails-i18n"
 
+gem "bcrypt", "3.1.18"
+
 gem "config"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
