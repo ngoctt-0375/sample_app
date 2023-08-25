@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   before_action :set_locale
 
+  include SessionsHelper
   private
   def set_locale
     locale = params[:locale].to_s.strip.to_sym
