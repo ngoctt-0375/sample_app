@@ -1,0 +1,9 @@
+validate:
+  user:
+    email:
+      length:
+        max: 255
+      regex: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    name:
+      length:
+        max: 50
