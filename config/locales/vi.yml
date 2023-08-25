@@ -17,12 +17,23 @@ vi:
     layouts:
       header:
         title: "Hướng dẫn Sample App bằng Ruby on Rails"
-        sign_in: "Đăng nhập"
+        login: "Đăng nhập"
       footer:
         description: <a href="https://www.railstutorial.org/">Hướng dẫn về Ruby on Rails</a> của <a href="https://www.michaelhartl.com/">Michael Hartl</a>
         new: Tin tức
     app_name: "Sample App"
     full_title: "Hướng dẫn Sample App bằng Ruby on Rails"
   sign_up:
-    title: "Đăng ký"
-    description: "Đây sẽ là một trang đăng ký cho người dùng mới."
+    title: "Đăng kí"
+    description: "Đăng kí cho người dùng mới"
+    label:
+      name: "Tên"
+      password: "Mật khẩu"
+      confirmation: "Xác nhận mật khẩu"
+    create:
+      success: "Chào mừng đến với ứng dụng mẫu"
+    submit: "Tạo tài khoản"
+  error:
+    form:
+      title: "Biểu mẫu chứa"
+      error: "Lỗi"

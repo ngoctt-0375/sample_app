@@ -56,7 +56,18 @@ en:
     full_title: "Ruby on Rails Tutorial Sample App"
   sign_up:
     title: "Sign Up"
-    description: "This will be a signup page for new users."
+    description: "This will be a sign up page for new users."
+    label:
+      name: "Name"
+      password: "Password"
+      confirmation: "Confirmation"
+    submit: "Create my account"
+    create:
+      success: "Welcome to Sample App"
+  error:
+    form:
+      title: "The form contains"
+      error: "error"
   login:
     title: "Login"
     description: "Login page."
