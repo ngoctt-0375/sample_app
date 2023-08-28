@@ -13,7 +13,7 @@ vi:
       title: "Chào mừng bạn đến với Ứng dụng mẫu"
       description: Đây là trang chủ của dự án mẫu sử dụng <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>.
       sign_up: "Đăng ký ngay"
-      label: "Home"
+      label: "Trang chủ"
     layouts:
       header:
         title: "Hướng dẫn Sample App bằng Ruby on Rails"
@@ -37,3 +37,17 @@ vi:
     form:
       title: "Biểu mẫu chứa"
       error: "Lỗi"
+  login:
+    title: "Đăng nhập"
+    description: "Trang đăng nhập"
+    label:
+      password: "Mật khẩu"
+    submit: "Đăng nhập"
+    new_user: "Người dùng mới?"
+    sign_up: "Đăng kí ngay!"
+    account:
+      title: "Tài khoản"
+      profile: "Thông tin cá nhân"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+    fail: "Email hoặc mật khẩu không chính xác"

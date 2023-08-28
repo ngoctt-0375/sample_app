@@ -71,3 +71,14 @@ en:
   login:
     title: "Login"
     description: "Login page."
+    label:
+      password: "Password"
+    submit: "Log in"
+    new_user: "New user?"
+    sign_up: "Sign up now!"
+    account:
+      title: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Logout"
+    fail: "Invalid email/password combination"
