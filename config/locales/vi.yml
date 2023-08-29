@@ -70,3 +70,12 @@ vi:
       button: "Xóa"
       confirm: "Bạn có chắc chắn muốn xóa"
     not_correct_user: "Không đúng người dùng"
+    activation:
+      success: "Xác thực thành công"
+      fail: "Xác thực thất bại"
+      not_active_message: "Tài khoản chưa được kích hoạt, vui lòng kiểm tra email để kích hoạt tài khoản"
+      check_email_message:  "Hãy kiểm tra email để kích hoạt tài khoản của bạn"
+      mail_subject: "Kích hoạt tài khoản"
+      greeting: "Xin chào"
+      mail_body: "Chaò mừng đến với ứng dụng mẫu, hãy bấm vào link bên dưới để xác thực tài khoản"
+      button: "Xác thực"

@@ -22,6 +22,8 @@ gem "pagy"
 
 gem "bootstrap-will_paginate", "1.0.0"
 
+gem "figaro"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 

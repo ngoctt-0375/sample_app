@@ -101,3 +101,12 @@ en:
       button: "Delete"
       confirm: "Are you sure to delete this user"
     not_correct_user: "User not correct"
+    activation:
+      success: "Activation successful"
+      fail: "Activation failed"
+      not_active_message: "Account not activated. Check your email for the activation link."
+      check_email_message:  "Please check your email to activate your account."
+      mail_subject: "Account Activation"
+      greeting: "Hi"
+      mail_body: "Welcome to the Sample App! Click on the link below to activate your account:"
+      button: "Activate"
