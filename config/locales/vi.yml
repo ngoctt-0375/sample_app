@@ -51,3 +51,4 @@ vi:
       settings: "Cài đặt"
       logout: "Đăng xuất"
     fail: "Email hoặc mật khẩu không chính xác"
+    remember_me: "Ghi nhớ đăng nhập"

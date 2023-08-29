@@ -82,3 +82,4 @@ en:
       settings: "Settings"
       logout: "Logout"
     fail: "Invalid email/password combination"
+    remember_me: "Remember me on this computer"
