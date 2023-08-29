@@ -49,6 +49,7 @@ en:
       header:
         title: "Ruby on Rails Tutorial Sample App"
         login: "Log in"
+        all_users: "Users"
       footer:
         description: The <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> by <a href="https://www.michaelhartl.com/">Michael Hartl</a>
         new: "News"
@@ -82,4 +83,21 @@ en:
       settings: "Settings"
       logout: "Logout"
     fail: "Invalid email/password combination"
-    remember_me: "Remember me on this computer"
+    not_login: "Please log in."
+    remember_me: "Ghi nhớ đăng nhập"
+  user:
+    edit:
+      title: "Edit user"
+      header: "Update your profile"
+      image_change: "Change"
+      not_found: "User not found"
+    index:
+      title: "All users"
+    update:
+      success: "Updated successful"
+    destroy:
+      success: "Deleted successfully"
+      fail: "Deleted failed"
+      button: "Delete"
+      confirm: "Are you sure to delete this user"
+    not_correct_user: "User not correct"

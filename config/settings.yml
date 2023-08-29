@@ -7,3 +7,8 @@ validate:
     name:
       length:
         max: 50
+    password:
+      length:
+        min: 6
+page_30: 30
+gravatar_size: 80
