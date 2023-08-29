@@ -5,9 +5,13 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate(params.dig(:session, :password))
-      reset_session
       log_in @user
-      params.dig(:session, :remember_me) == "1" ? remember(@user) : forget(@user)
+      if params.dig(:session,
+                    :remember_me) == "1"
+        remember(@user)
+      else
+        forget(@user)
+      end
       redirect_to @user
       # Log the user in and redirect to the user's show page.
     else
@@ -25,5 +29,9 @@ class SessionsController < ApplicationController
   private
   def load_user_from_params
     @user = User.find_by email: params.dig(:session, :email)&.downcase
+    return unless @user.nil?
+
+    flash[:danger] = t("login.fail")
+    render "new", status: :unprocessable_entity
   end
 end
