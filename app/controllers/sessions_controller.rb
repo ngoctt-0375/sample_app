@@ -5,15 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate(params.dig(:session, :password))
-      log_in @user
-      if params.dig(:session,
-                    :remember_me) == "1"
-        remember(@user)
-      else
-        forget(@user)
-      end
-      redirect_to @user
-      # Log the user in and redirect to the user's show page.
+      user_activated
     else
       # Create an error message.
       flash[:danger] = t("login.fail")
@@ -27,6 +19,18 @@ class SessionsController < ApplicationController
   end
 
   private
+  def user_activated user
+    if @user.activated?
+      log_in user
+      params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+      redirect_back_or user
+    else
+      message = t("user.activation.not_active_message")
+      flash[:warning] = message
+      redirect_to root_url
+    end
+  end
+
   def load_user_from_params
     @user = User.find_by email: params.dig(:session, :email)&.downcase
     return unless @user.nil?

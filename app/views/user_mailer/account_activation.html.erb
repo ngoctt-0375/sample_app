@@ -1,0 +1,8 @@
+<h1><%= raw t("static_pages.home.title") %></h1>
+<p><%= t("user.activation.greeting")%> <%= @user.name %>,</p>
+<p>
+  <%= t("user.activation.mail_body")%>
+</p>
+
+<%= link_to t("user.activation.button"), edit_account_activation_url(id: @user.activation_token,
+email: @user.email) %>
