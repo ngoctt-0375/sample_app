@@ -84,7 +84,8 @@ en:
       logout: "Logout"
     fail: "Invalid email/password combination"
     not_login: "Please log in."
-    remember_me: "Ghi nhớ đăng nhập"
+    remember_me: "Remember me"
+    forgot_password: "Forgot password?"
   user:
     edit:
       title: "Edit user"
@@ -110,3 +111,24 @@ en:
       greeting: "Hi"
       mail_body: "Welcome to the Sample App! Click on the link below to activate your account:"
       button: "Activate"
+    not_active: "User is inactive"
+    password_reset:
+      info: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+      warning_empty_password: "can't be empty"
+      success: "Password has been reset."
+      token_expired: "Password reset has expired."
+      mail_subject: "Reset password"
+      form_reset:
+        title: "Reset password"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        button: "Update password"
+      form_forgot:
+        title: "Forgot password"
+        button: "Submit"
+      mailer:
+        title: "Password reset"
+        guide: "To reset your password click the link below:"
+        time: "This link will expire in two hours."
+        stay_as: "If you did not request your password to be reset, please ignore this email and your password will stay as it is."
