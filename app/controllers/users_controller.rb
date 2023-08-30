@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(show update edit)
-  before_action :find_user, only: %i(show update edit destroy)
+  before_action :logged_in_user, only: %i(show update edit following followers)
+  before_action :find_user,
+                only: %i(show update edit destroy following followers)
   before_action :correct_user, only: %i(update edit)
   before_action :admin_user, only: :destroy
 
@@ -46,6 +47,20 @@ class UsersController < ApplicationController
       flash[:danger] = t("user.destroy.fail")
     end
     redirect_to users_url
+  end
+
+  def following
+    @title = t("relationship.following.title")
+    @pagy, @users = pagy @user.following,
+                         item: Settings.micro_post.limit_items
+    render "show_follow", status: :unprocessable_entity
+  end
+
+  def followers
+    @title = t("relationship.follower.title")
+    @pagy, @users = pagy @user.followers,
+                         item: Settings.micro_post.limit_items
+    render "show_follow", status: :unprocessable_entity
   end
 
   private

@@ -148,3 +148,11 @@ en:
     ago: "Ago"
     place_order: "place order"
     file_size: "Maximum file size is 5MB. Please choose a smaller file."
+  relationship:
+    follower:
+      title: "Followers"
+    following:
+      title: "Following"
+    follow: "Follow"
+    unfollow: "Unfollow"
+    view_profile: "view my profile"
