@@ -10,5 +10,14 @@ validate:
     password:
       length:
         min: 6
+micro_post:
+  content:
+    length:
+      max: 140
+  image:
+    type: <%= %w(image/jpeg image/gif image/png) %>
+    size_5: 5
+  limit_items: 10
 page_30: 30
+page_10: 10
 gravatar_size: 80

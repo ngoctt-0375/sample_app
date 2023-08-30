@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(update edit)
+  before_action :logged_in_user, only: %i(show update edit)
   before_action :find_user, only: %i(show update edit destroy)
   before_action :correct_user, only: %i(update edit)
   before_action :admin_user, only: :destroy
 
-  def show; end
+  def show
+    @pagy, @microposts = pagy @user.microposts.all, items: Settings.page_10
+  end
 
   def index
     @pagy, @users = pagy User.all, items: Settings.page_30
@@ -64,16 +66,8 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = t("login.edit.not_found")
-    store_location
-    redirect_to login_url, status: :see_other
-  end
-
   def correct_user
-    return if current_user?(@user)
+    return if current_user? @user
 
     flash[:danger] = t("user.not_correct_user")
     redirect_to root_path

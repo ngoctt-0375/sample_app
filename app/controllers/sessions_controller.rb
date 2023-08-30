@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if @user&.authenticate(params.dig(:session, :password))
-      user_activated
+      user_activated @user
     else
       # Create an error message.
       flash[:danger] = t("login.fail")
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
 
   private
   def user_activated user
-    if @user.activated?
+    if user.activated?
       log_in user
       params[:session][:remember_me] == "1" ? remember(user) : forget(user)
       redirect_back_or user
