@@ -33,6 +33,7 @@ class SessionsController < ApplicationController
 
   def load_user_from_params
     @user = User.find_by email: params.dig(:session, :email)&.downcase
+
     return unless @user.nil?
 
     flash[:danger] = t("login.fail")
